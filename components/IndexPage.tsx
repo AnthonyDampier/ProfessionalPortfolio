@@ -36,7 +36,8 @@ export default function IndexPage(props: IndexPageProps) {
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
-        <IntroTemplate />
+        {/* provides the admin with easier access to source */}
+        {/* <IntroTemplate /> */}
       </Layout>
     </>
   )
