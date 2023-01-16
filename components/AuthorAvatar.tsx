@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 export default function AuthorAvatar(props: Author) {
   const { name, picture } = props
+  console.log('AuthorAvatar props: ',props);
   return (
     <div className="flex items-center">
       <div className="relative mr-4 h-12 w-12">
