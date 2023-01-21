@@ -170,7 +170,7 @@ export default function Example() {
                 <a href="#" className="text-base font-medium text-black hover:text-zinc">
                     Blog
                 </a>
-                <a href="#" className="text-base font-medium text-black hover:text-zinc">
+                <a href="/" className="text-base font-medium text-black hover:text-zinc">
                     About Me
                 </a>
                 <Popover className="relative">
