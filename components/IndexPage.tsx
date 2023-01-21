@@ -33,23 +33,16 @@ export default function IndexPage(props: BlogPageProps) {
   }
 
   return (
-    <div className="bg-gradient-to-r from-slate-600 to-slate-900 antialiased">
+    <div className="bg-gradient-to-r from-slate-600 to-slate-900 antialiased w-fit">
       <Layout preview={preview} loading={loading}>
         {/* Navigation goes here */}
         <Header/>
         <div className='w-3/5 mx-auto'>
           <About/>
-          <hr/>
           <Projects/>
-          <hr/>
           {/* Blog : section will not appear if there are 0 posts*/}
           {posts.length > 0 && 
-            <div>
-              <h4 className='font-bold text-white leading-tight tracking-tighter md:text-4xl mb-5'>
-                Blog
-              </h4>
-              <MoreStories posts={posts} />
-            </div>
+            <MoreStories posts={posts} />
           }
         </div>
         {/* <BlogPage preview={preview} loading={loading} posts={posts} settings={settings}/> */}

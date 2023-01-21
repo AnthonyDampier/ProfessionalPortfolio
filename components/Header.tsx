@@ -97,6 +97,9 @@ export default function Example() {
     return (
         <Popover className="relative bg-transparent pt-2">
         <div className="mx-auto max-w-7xl px-6 w-5/6 bg-white rounded-lg shadow-2xl ">
+            <div className='sm:hidden flex justify-center align-middle relative top-5 text-lg font-bold'>
+                Rotate Phone
+            </div>
             <div className="flex justify-center items-center py-6 md:space-x-10 ">
                 <Popover.Group as="nav" className="hidden space-x-10 md:flex justify-center">
                     <Popover className="relative flex justify-center">
