@@ -34,7 +34,7 @@ export default function PostPage(props: PostPageProps) {
   }
 
   return (
-    <>
+    <div className='bg-gradient-to-r from-slate-600 to-slate-900 antialiased'>
       <Head>
         <PostPageHead settings={settings} post={post} />
       </Head>
@@ -46,7 +46,7 @@ export default function PostPage(props: PostPageProps) {
             <PostTitle>Loading…</PostTitle>
           ) : (
             <>
-              <article>
+              <article className='w-4/5 mx-auto'>
                 <PostHeader
                   title={post.title}
                   coverImage={post.coverImage}
@@ -61,6 +61,6 @@ export default function PostPage(props: PostPageProps) {
           )}
         </Container>
       </Layout>
-    </>
+    </div>
   )
 }

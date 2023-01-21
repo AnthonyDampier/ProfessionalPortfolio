@@ -218,13 +218,13 @@ export function OpenGraphImage(props: { title: string }) {
           justifyContent: 'center',
           fontSize: 40,
           fontStyle: 'normal',
-          color: 'black',
+          color: 'white',
           marginTop: 0,
           lineHeight: 1.8,
           whiteSpace: 'pre-wrap',
         }}
       >
-        <b style={{ background: '#fff' }}>{title}</b>
+        <b style={{ background: '#000' }}>{title}</b>
       </div>
       <div
         style={{

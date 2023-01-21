@@ -2,6 +2,7 @@ import { PortableText } from '@portabletext/react'
 import Link from 'next/link'
 
 import styles from './BlogHeader.module.css'
+import Header from './Header'
 
 export default function BlogHeader({
   title,
@@ -15,27 +16,32 @@ export default function BlogHeader({
   switch (level) {
     case 1:
       return (
-        <header className="mt-16 mb-10 flex flex-col items-center md:mb-12 md:flex-row md:justify-between">
-          <h1 className="text-6xl font-bold leading-tight tracking-tighter md:pr-8 md:text-8xl">
-            {title}
-          </h1>
-          <h4
-            className={`mt-5 text-center text-lg md:pl-8 md:text-left ${styles.portableText}`}
-          >
-            <PortableText value={description} />
-          </h4>
-        </header>
+        <>
+          <header className="mt-16 mb-5 flex flex-col items-center md:mb-12 md:flex-row md:justify-between">
+            <h1 className="font-bold text-white leading-tight tracking-tighter md:text-4xl">
+              {title}
+            </h1>
+            <h4
+              className={`mt-5 text-center text-lg text-zinc-500 md:text-left ${styles.portableText}`}
+            >
+              <PortableText value={description} />
+            </h4>
+          </header>
+        </>
       )
 
     case 2:
       return (
-        <header>
-          <h2 className="mt-8 mb-20 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
-            <Link href="/" className="hover:underline">
-              {title}
-            </Link>
-          </h2>
-        </header>
+        <div className='mb-10'>
+        <Header />
+          {/* <header className="mt-16 mb-5 flex flex-col items-center md:mb-12 md:flex-row md:justify-between">
+            <h2 className="mt-3 mb-8 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
+              <Link href="/" className="hover:underline">
+                {title}
+              </Link>
+            </h2>
+          </header> */}
+        </div>
       )
 
     default:
