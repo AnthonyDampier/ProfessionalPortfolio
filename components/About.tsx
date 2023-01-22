@@ -1,6 +1,6 @@
 export default function(){
     return(
-        <section className={`mt-40 mb-60 text-center text-lg md:pl-0 bg-black`}>
+        <section className={`mt-40 mb-60 text-center text-lg md:pl-0`}>
             <h1 className='drop-shadow-lg shadow-black font-bold text-white leading-tight tracking-tighter md:text-4xl sm:text-2xl mb-1 flex justify-center'>
                 Hi, I'm Anthony Dampier
             </h1>
