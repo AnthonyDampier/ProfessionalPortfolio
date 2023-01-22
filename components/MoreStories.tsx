@@ -4,7 +4,7 @@ import type { Post } from 'lib/sanity.queries'
 export default function MoreStories({ posts }: { posts: Post[] }) {
   return (
     <section id='blog'>
-      <h4 className='font-semibold  text-white leading-tight tracking-tighter md:text-4l text-6xl mb-20 text-center'>
+      <h4 className='font-semibold  text-white leading-tight tracking-tighter md:text-4l text-6xl text-center'>
         <span className="z-10 drop-shadow-lg shadow-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-500 ">
         &nbsp;Lessons learned&nbsp;
         </span>
@@ -15,6 +15,9 @@ export default function MoreStories({ posts }: { posts: Post[] }) {
         &nbsp;experience gained&nbsp;
         </span>
         .
+      </h4>
+      <h4 className='flex justify-center text-l tracking-tightly decoration-1 font-light text-zinc-300 mb-8'>
+        Blog
       </h4>
       <div className="pb-20 grid grid-cols-1 gap-y-20 md:grid-cols-2 md:gap-x-16 md:gap-y-32 lg:gap-x-32">
         {posts.map((post) => (

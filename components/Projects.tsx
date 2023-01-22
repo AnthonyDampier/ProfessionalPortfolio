@@ -30,7 +30,7 @@ export default function(){
 
     return(
         <div id='projects' className={`mb-24 text-lg`}>
-            <h4 className='font-semibold  text-white leading-tight tracking-tighter md:text-4l text-6xl mb-20 flex justify-center'>
+            <h4 className='font-semibold  text-white leading-tight tracking-tighter md:text-4l text-6xl flex justify-center'>
                 From
                 <div className="z-10 drop-shadow-lg shadow-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-500 ">
                 &nbsp;idea&nbsp;
@@ -44,6 +44,9 @@ export default function(){
                 &nbsp;consumer
                 </div>
                 .  
+            </h4>
+            <h4 className='flex justify-center text-l tracking-tightly decoration-1 font-light text-zinc-300 mb-8'>
+            Projects
             </h4>
             <div className="">
                 {projects?.length > 0 && <ProjectDisplays projects={projects} />}
