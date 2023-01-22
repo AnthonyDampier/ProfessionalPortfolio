@@ -29,7 +29,7 @@ export default function(){
 
 
     return(
-        <div id='projects' className={`mt-20 text-center text-lg md:pl-0 md:text-left`}>
+        <div id='projects' className={`mb-24 text-lg`}>
             <h4 className='font-semibold  text-white leading-tight tracking-tighter md:text-4l text-6xl mb-20 flex justify-center'>
                 From
                 <div className="z-10 drop-shadow-lg shadow-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-500 ">
@@ -37,15 +37,17 @@ export default function(){
                 </div>
                 to
                 <div className="z-10 drop-shadow-lg shadow-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 ">
-                &nbsp;products&nbsp;
+                &nbsp;product&nbsp;
                 </div>
                 to
                 <div className="z-10 drop-shadow-lg shadow-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-800 ">
-                &nbsp;consumers
+                &nbsp;consumer
                 </div>
                 .  
             </h4>
-            {projects?.length > 0 && <ProjectDisplays projects={projects} />}
+            <div className="">
+                {projects?.length > 0 && <ProjectDisplays projects={projects} />}
+            </div>
         </div>
         
 
