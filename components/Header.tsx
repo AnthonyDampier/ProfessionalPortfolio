@@ -81,7 +81,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                             'group inline-flex items-center text-center rounded-md bg-white text-base font-medium hover:text-black-900 focus:outline-none focus:ring-2 focus:ring-zinc-600 focus:ring-offset-2'
                             )}
                         >
-                            <span className='text-center'>Projects</span>
+                            <span className='text-center'>Project Examples</span>
                             <ChevronDownIcon
                             className={classNames(
                                 open ? 'text-black' : 'text-black',
@@ -138,12 +138,9 @@ export default function Header({ posts }: { posts: Post[] }) {
                         </>
                     )}
                 </Popover>
-                <a href="#blog" className="text-base font-medium text-black hover:text-zinc">
-                    Blog
-                </a>
-                <a href="/" className="text-base font-medium text-black hover:text-zinc">
+                {/* <a href="/" className="text-base font-medium text-black hover:text-zinc">
                     About Me
-                </a>
+                </a> */}
                 <Popover className="relative">
                     {({ open }) => (
                         <>
@@ -153,7 +150,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                                 'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-zinc focus:outline-none focus:ring-2 focus:ring-zinc-600 focus:ring-offset-2'
                                 )}
                             >
-                                <span>More</span>
+                                <span>Let's Connect</span>
                                 <ChevronDownIcon
                                 className={classNames(
                                     open ? 'text-black' : 'text-black',
@@ -216,6 +213,9 @@ export default function Header({ posts }: { posts: Post[] }) {
                     )}
                     </Popover>
                 </Popover.Group>
+                <a href="#blog" className="text-base font-medium text-black hover:text-zinc">
+                    Blog
+                </a>
             </div>
         </div>
 

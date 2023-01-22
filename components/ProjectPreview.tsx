@@ -15,7 +15,9 @@ export default function PostPreview({project})
                     {title}
                 </h3>
                 {description && <p className="mb-4 text-lg leading-relaxed text-white cursor-pointer">{description}</p>}
-                <img className='object-fit transition-shadow duration-200 hover:shadow-medium cursor-pointer object-fit h-64 hover:shadow-slate-700' src={image}/>
+                <img className='object-fit transition-shadow shadow-slate-800 duration-200 shadow-small hover:shadow-medium cursor-pointer object-fit h-64 hover:shadow-slate-800
+                transition-shadow duration-200 hover:shadow-medium
+                ' src={image}/>
             </div>
         </a>
     )

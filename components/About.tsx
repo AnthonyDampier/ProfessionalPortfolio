@@ -12,7 +12,7 @@ export default function(){
             </h4>
             <h4 className='font-semibold mt-5 text-white leading-tight tracking-tighter xl:text-6xl md:text-5xl sm:text-2xl flex justify-center h-16'>
                 Turning 
-                <div className="z-10  drop-shadow-lg shadow-white font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-200 to-pink-600">
+                <div className="z-1  drop-shadow-lg shadow-white font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-200 to-pink-600">
                 &nbsp;ideas&nbsp;
                 </div>
                 into real life
