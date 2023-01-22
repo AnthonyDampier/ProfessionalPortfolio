@@ -33,25 +33,25 @@ const resources = [
     {
         name: 'GitHub',
         description: 'Check out what I\'m currently working on!',
-        href: '#',
+        href: 'https://github.com/AnthonyDampier',
         icon: FaGithub,
     },
     {
         name: 'LinkedIn',
         description: 'Connect and create new opportunities!',
-        href: '#',
+        href: 'https://www.linkedin.com/in/anthonydampier',
         icon: FaLinkedin,
     },
     {
         name: 'Prentus',
         description: 'Hire fantastic developers and UX designers!',
-        href: '#',
+        href: 'https://community.primeacademy.io/p/anthony-dampier',
         icon: BookmarkSquareIcon,
     },
 ]
 
 const callsToAction = [
-    { name: 'Open the projects now!', href: '#projects', icon: PlayIcon, key: 1 },
+    { name: 'View the projects now!', href: '#projects', icon: PlayIcon, key: 1 },
     // { name: 'Contact Sales', href: '#', icon: PhoneIcon },
 ]
 
@@ -176,6 +176,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                                     <a
                                     key={index}
                                     href={item.href}
+                                    target='_blank'
                                     className="-m-3 flex items-start rounded-lg p-3 hover:bg-zinc"
                                     >
                                     <item.icon className="h-6 w-6 flex-shrink-0 text-zinc-400" aria-hidden="true" />
@@ -200,7 +201,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                                     </ul>
                                 </div>
                                 <div className="mt-5 text-sm">
-                                    <a href="#" className="font-medium text-sky-400 hover:text-sky-700">
+                                    <a href="#blog" className="font-medium text-sky-400 hover:text-sky-700">
                                     View all posts
                                     <span aria-hidden="true"> &rarr;</span>
                                     </a>
