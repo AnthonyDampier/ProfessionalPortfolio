@@ -10,7 +10,7 @@ import {
 // brings in array of projects from component.
 
 
-export default function(){
+export default function Projects(){
     const projects =
         [
                 {

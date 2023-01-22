@@ -1,11 +1,11 @@
 import Resume from "./Resume";
 import TechnologyKnowledge from "./TechnologyKnowledge";
 
-export default function(){
+export default function About(){
     return(
         <section className={`mt-24 mb-24 text-center text-lg`}>
             <h1 className='drop-shadow-lg shadow-black font-bold text-white leading-tight tracking-tighter text-3xl md:text-4xl sm:text-3xl mb-1 flex justify-center'>
-                Hi, I'm Anthony Dampier.
+                Hi, I&apos;m Anthony Dampier.
             </h1>
             <h4 className='drop-shadow-lg shadow-black text-zinc-400 leading-tight tracking-tighter text-2xl mb-1 flex justify-center'>
                 Full Stack Web Developer  

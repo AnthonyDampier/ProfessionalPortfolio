@@ -12,7 +12,7 @@ export default function PostPreview({project})
     
     return (
         <div className='' key={key}>
-            <a href={href} rel='noopener' target='_blank'>
+            <a href={href} rel="noreferrer"  target='_blank'>
                 <h3 className="mb-3 text-3xl leading-snug text-white hover:underline cursor-pointer">
                     {title}
                 </h3>

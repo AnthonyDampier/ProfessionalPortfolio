@@ -25,6 +25,8 @@ import {
     FaGithub, 
     FaLinkedin, 
 } from 'react-icons/fa';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const resources = [
     {
@@ -92,9 +94,9 @@ export default function Header({ posts }: { posts: Post[] }) {
         <Popover className="relative bg-transparent pt-2">
         <div className="mx-auto px-6 w-4/5 md:w-5/6 bg-white rounded-lg shadow-2xl ">
             <div className="flex justify-center items-center py-6 md:space-x-10 ">
-                <a href="/" className="text-base font-medium text-black hover:text-zinc">
+                <Link href="/" className="text-base font-medium text-black hover:text-zinc">
                     Home
-                </a>
+                </Link>
                 <Popover.Group as="nav" className="space-x-10 flex justify-center">
                     <Popover className="relative flex justify-center">
                     {({ open }) => (
@@ -131,6 +133,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                                     <a
                                     key={index}
                                     href={item.href}
+                                    rel='noreferrer'
                                     target="_blank"
                                     className="-m-3 flex items-start rounded-lg p-3 hover:bg-black-50"
                                     >
@@ -174,7 +177,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                                 'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-zinc focus:outline-none focus:ring-2 focus:ring-zinc-600 focus:ring-offset-2'
                                 )}
                             >
-                                <span>Let's Connect</span>
+                                <span>Let&apos;s Connect</span>
                                 <ChevronDownIcon
                                 className={classNames(
                                     open ? 'text-black' : 'text-black',
@@ -200,6 +203,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                                     <a
                                     key={index}
                                     href={item.href}
+                                    rel='noreferrer'
                                     target='_blank'
                                     className="-m-3 flex items-start rounded-lg p-3 hover:bg-zinc"
                                     >
@@ -258,11 +262,13 @@ export default function Header({ posts }: { posts: Post[] }) {
                 <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">
                     <div>
-                    <img
+                    {/* <Image
                         className="h-8 w-auto"
+                        width={30}
+                        height={30}
                         src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                         alt="Your Company"
-                    />
+                    /> */}
                     </div>
                     <div className="-mr-2">
                     <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-black-400 hover:bg-black-100 hover:text-black-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-zinc-600">

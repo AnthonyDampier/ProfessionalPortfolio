@@ -63,7 +63,7 @@ export default function TechnologyKnowledge(){
                     <a 
                     className="p-2" 
                     href={tech.href} 
-                    rel="noopener"
+                    rel="noreferrer"
                     target='_blank'
                     key={index}>
                         <Image 
