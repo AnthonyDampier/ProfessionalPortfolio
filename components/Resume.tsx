@@ -3,7 +3,7 @@ export default function Resume(){
     return(
         
             <button className="group relative overflow-hidden bg-white shadow-slate-800 shadow-small">
-                <a href="../Resume/Anthony_Dampier-Resume copy.pdf" target="_blank">
+                <a href="../Resume/Anthony_Dampier_Resume.pdf" target="_blank">
                     <div className="absolute inset-0 w-3 bg-gradient-to-r from-pink-700 to-purple-700 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
                     <span className="relative text-zinc-700 group-hover:text-white flex justify-center font-bold text-lg p-3">
                         Anthony's Resume
