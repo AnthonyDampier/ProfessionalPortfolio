@@ -38,7 +38,7 @@ export default function IndexPage(props: BlogPageProps) {
     <div className="bg-gradient-to-r from-slate-600 to-slate-900 antialiased w-fit pb-96">
       <Layout preview={preview} loading={loading}>
         {/* Navigation goes here */}
-        <Header/>
+        <Header posts={posts}/>
         <div className='w-3/5 mx-auto'>
         <About/>
         <Projects/>

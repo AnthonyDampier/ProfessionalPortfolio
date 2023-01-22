@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
+import type { Post, Settings } from 'lib/sanity.queries'
 import {
     ArrowPathIcon,
     Bars3Icon,
@@ -17,47 +18,17 @@ import {
     ClipboardDocumentCheckIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/20/solid';
-import {FaGithub, 
+import { 
+    ChevronDownIcon 
+} from '@heroicons/react/20/solid';
+import {
+    FaGithub, 
     FaLinkedin, 
 } from 'react-icons/fa';
 
 
 import {projects} from "./ProjectsArray";
 
-
-
-// const projects = [
-//     {
-//         name: 'GoMove',
-//         description: 'Workout Program Creator Application using React.js, Node, & More!',
-//         href: 'https://protected-bastion-78122.herokuapp.com/#/home',
-//         icon: ClipboardDocumentCheckIcon,
-//     },
-//     {
-//         name: 'Movie Collection',
-//         description: 'Speak directly to your customers in a more meaningful way.',
-//         href: 'https://obscure-fortress-88731.herokuapp.com/',
-//         icon: FilmIcon,
-//     },
-//     // { name: 'Security', description: "Your customers' data will be safe and secure.", href: '#', icon: ShieldCheckIcon },
-//     // {
-//     //     name: 'Integrations',
-//     //     description: "Connect with third-party tools that you're already using.",
-//     //     href: '#',
-//     //     icon: Squares2X2Icon,
-//     // },
-//     // {
-//     //     name: 'Automations',
-//     //     description: 'Build strategic funnels that will drive your customers to convert',
-//     //     href: '#',
-//     //     icon: ArrowPathIcon,
-//     // },
-//     ]
-const callsToAction = [
-    { name: 'Open the projects now!', href: '#projects', icon: PlayIcon },
-    // { name: 'Contact Sales', href: '#', icon: PhoneIcon },
-]
 const resources = [
     {
         name: 'GitHub',
@@ -77,43 +48,40 @@ const resources = [
         href: '#',
         icon: BookmarkSquareIcon,
     },
-    // {
-    //     name: 'Events',
-    //     description: 'See what meet-ups and other events we might be planning near you.',
-    //     href: '#',
-    //     icon: CalendarIcon,
-    // },
-    // { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon },
 ]
-const recentPosts = [
-    { id: 1, name: 'Boost your conversion rate', href: '#' },
-    { id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#' },
-    { id: 3, name: 'Improve your customer experience', href: '#' },
+
+const callsToAction = [
+    { name: 'Open the projects now!', href: '#projects', icon: PlayIcon, key: 1 },
+    // { name: 'Contact Sales', href: '#', icon: PhoneIcon },
 ]
+
+
+
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+
+
+export default function Header({ posts }: { posts: Post[] }) {
+    
+
     return (
         <Popover className="relative bg-transparent pt-2">
-        <div className="mx-auto max-w-7xl px-6 w-5/6 bg-white rounded-lg shadow-2xl ">
-            <div className='sm:hidden flex justify-center align-middle relative top-5 text-lg font-bold'>
-                Rotate Phone
-            </div>
+        <div className="mx-auto px-6 lg:w-4/6 md:w-5/6 bg-white rounded-lg shadow-2xl ">
             <div className="flex justify-center items-center py-6 md:space-x-10 ">
-                <Popover.Group as="nav" className="hidden space-x-10 md:flex justify-center">
+                <Popover.Group as="nav" className="space-x-10 flex justify-center">
                     <Popover className="relative flex justify-center">
                     {({ open }) => (
                         <>
                         <Popover.Button
                             className={classNames(
                             open ? 'text-black' : 'text-black',
-                            'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-black-900 focus:outline-none focus:ring-2 focus:ring-zinc-600 focus:ring-offset-2'
+                            'group inline-flex items-center text-center rounded-md bg-white text-base font-medium hover:text-black-900 focus:outline-none focus:ring-2 focus:ring-zinc-600 focus:ring-offset-2'
                             )}
                         >
-                            <span>Projects</span>
+                            <span className='text-center'>Projects</span>
                             <ChevronDownIcon
                             className={classNames(
                                 open ? 'text-black' : 'text-black',
@@ -135,26 +103,27 @@ export default function Example() {
                             <Popover.Panel className="absolute z-10 -ml-4 mt-9 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
                             <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                                {projects.map((item) => (
+                                {projects.map((item, index) => (
                                     <a
-                                    key={item.name}
+                                    key={index}
                                     href={item.href}
                                     target="_blank"
                                     className="-m-3 flex items-start rounded-lg p-3 hover:bg-black-50"
                                     >
                                     <item.icon className="h-6 w-6 flex-shrink-0 text-zinc-400" aria-hidden="true" />
                                     <div className="ml-4">
-                                        <p className="text-base font-medium text-black-900">{item.name}</p>
+                                        <p className="text-base font-medium text-black-900">{item.title}</p>
                                         <p className="mt-1 text-sm text-black-500">{item.description}</p>
                                     </div>
                                     </a>
                                 ))}
                                 </div>
                                 <div className="space-y-6 bg-black-50 px-5 py-5 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8 bg-zinc-300">
-                                {callsToAction.map((item) => (
+                                {callsToAction.map((item, index) => (
                                     <div key={item.name} className="flow-root">
                                     <a
                                         href={item.href}
+                                        key={index}
                                         className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-black-900 hover:bg-black-100"
                                     >
                                         <item.icon className="h-6 w-6 flex-shrink-0 text-sky-400" aria-hidden="true" />
@@ -206,9 +175,9 @@ export default function Example() {
                             <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
                             <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                                {resources.map((item) => (
+                                {resources.map((item, index) => (
                                     <a
-                                    key={item.name}
+                                    key={index}
                                     href={item.href}
                                     className="-m-3 flex items-start rounded-lg p-3 hover:bg-zinc"
                                     >
@@ -224,11 +193,11 @@ export default function Example() {
                                 <div>
                                     <h3 className="text-base font-medium text-black">Recent Posts</h3>
                                     <ul role="list" className="mt-4 space-y-4">
-                                    {recentPosts.map((post) => (
-                                        <li key={post.id} className="truncate text-base">
-                                        <a href={post.href} className="font-medium text-black hover:text-zinc-600">
-                                            {post.name}
-                                        </a>
+                                    {posts.slice(0,5).map((post, index) => (
+                                        <li key={index} className="truncate text-base indent-4">
+                                            <a href={post._id} className="font-medium text-zinc-700 hover:text-zinc-600">
+                                                {post.title}
+                                            </a>
                                         </li>
                                     ))}
                                     </ul>
@@ -279,14 +248,14 @@ export default function Example() {
                 </div>
                 <div className="mt-6">
                     <nav className="grid gap-y-8">
-                    {projects.map((item) => (
+                    {projects.map((item,index) => (
                         <a
-                        key={item.name}
+                        key={index}
                         href={item.href}
                         className="-m-3 flex items-center rounded-md p-3 hover:bg-black-50"
                         >
                         <item.icon className="h-6 w-6 flex-shrink-0 text-indigo-600" aria-hidden="true" />
-                        <span className="ml-3 text-base font-medium text-black">{item.name}</span>
+                        <span className="ml-3 text-base font-medium text-black">{item.title}</span>
                         </a>
                     ))}
                     </nav>
