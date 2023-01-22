@@ -3,7 +3,7 @@ import type { Post } from 'lib/sanity.queries'
 
 export default function MoreStories({ posts }: { posts: Post[] }) {
   return (
-    <section>
+    <section id='blog'>
       <h4 className='font-semibold  text-white leading-tight tracking-tighter md:text-4l text-6xl mb-20 text-center'>
         <span className="z-10 drop-shadow-lg shadow-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-500 ">
         &nbsp;Lessons learned&nbsp;

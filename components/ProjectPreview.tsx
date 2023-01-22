@@ -6,11 +6,11 @@ import Link from 'next/link'
 
 export default function PostPreview({project})
 {
-    const { title, description, image, href } = project
+    const { title, description, image, href, key} = project
     
     return (
         <a href={href} target='_blank'>
-            <div className=''>
+            <div className='' key={key}>
                 <h3 className="mb-3 text-3xl leading-snug text-white hover:underline cursor-pointer">
                     {title}
                 </h3>
