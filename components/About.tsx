@@ -1,3 +1,5 @@
+import TechnologyKnowledge from "./TechnologyKnowledge";
+
 export default function(){
     return(
         <section className={`mt-40 mb-60 text-center text-lg`}>
@@ -18,7 +20,7 @@ export default function(){
                 </div>
                 is my calling.  
             </h4>
-            
+            <TechnologyKnowledge/>
         </section>
         
 
