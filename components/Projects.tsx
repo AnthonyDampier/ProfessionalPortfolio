@@ -1,31 +1,40 @@
+import React from "react";
 import ProjectDisplays from "./ProjectDisplay"
+import {
+    FilmIcon,
+    PlayIcon,
+    Squares2X2Icon,
+} from '@heroicons/react/24/outline'
+
 
 // brings in array of projects from component.
-import {projects} from "./ProjectsArray";
+
 
 export default function(){
-
-    // const projects = [
-    //     {
-    //         title: 'GoMove 💪🏽',
-    //         description: 'Built using React, Postgres, ',
-    //         href: 'https://protected-bastion-78122.herokuapp.com/#/home',
-    //         image: '../images/GoMoveProject.png',
-    //     },
-    //     {
-    //         title: 'Cactus Mayhem 🤠🌵',
-    //         description: 'Game using JavaScript, HTML, &  CSS!',
-    //         href: 'https://cactus-mayhem.herokuapp.com/',
-    //         image: '../images/CactusMayhemProject.png',
-    //     },
-    //     {
-    //         title: 'The Collection 🎬',
-    //         description: 'Hire fantastic developers and UX designers!',
-    //         href: 'https://obscure-fortress-88731.herokuapp.com/#/',
-    //         image: '../images/TheCollectionProject.png',
-    //     },
-    // ]
-
+    const projects =
+        [
+                {
+                    title: 'GoMove 💪🏽',
+                    description: 'Built using React, Postgres, ',
+                    href: 'https://protected-bastion-78122.herokuapp.com/#/home',
+                    image: '/images/GoMoveProject.png',
+                    icon: Squares2X2Icon,
+                },
+                {
+                    title: 'Cactus Mayhem 🤠🌵',
+                    description: 'Game using JavaScript, HTML, &  CSS!',
+                    href: 'https://cactus-mayhem.herokuapp.com/',
+                    image: '/images/CactusMayhemProject.png',
+                    icon: PlayIcon,
+                },
+                {
+                    title: 'The Collection 🎬',
+                    description: 'Hire fantastic developers and UX designers!',
+                    href: 'https://obscure-fortress-88731.herokuapp.com/#/',
+                    image: '/images/TheCollectionProject.png',
+                    icon: FilmIcon,
+                }
+        ]
 
 
     return(
@@ -49,10 +58,8 @@ export default function(){
             Projects
             </h4>
             <div className="">
-                {projects?.length > 0 && <ProjectDisplays projects={projects} />}
+                {projects.length > 0 && <ProjectDisplays projects={projects} />}
             </div>
         </div>
-        
-
     )
 }

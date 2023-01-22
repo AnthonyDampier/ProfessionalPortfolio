@@ -26,9 +26,6 @@ import {
     FaLinkedin, 
 } from 'react-icons/fa';
 
-
-import {projects} from "./ProjectsArray";
-
 const resources = [
     {
         name: 'GitHub',
@@ -65,12 +62,39 @@ function classNames(...classes) {
 
 
 export default function Header({ posts }: { posts: Post[] }) {
-    
 
+    const projects =
+        [
+                {
+                    title: 'GoMove 💪🏽',
+                    description: 'Built using React, Postgres, ',
+                    href: 'https://protected-bastion-78122.herokuapp.com/#/home',
+                    image: '/images/GoMoveProject.png',
+                    icon: Squares2X2Icon,
+                },
+                {
+                    title: 'Cactus Mayhem 🤠🌵',
+                    description: 'Game using JavaScript, HTML, &  CSS!',
+                    href: 'https://cactus-mayhem.herokuapp.com/',
+                    image: '/images/CactusMayhemProject.png',
+                    icon: PlayIcon,
+                },
+                {
+                    title: 'The Collection 🎬',
+                    description: 'Hire fantastic developers and UX designers!',
+                    href: 'https://obscure-fortress-88731.herokuapp.com/#/',
+                    image: '/images/TheCollectionProject.png',
+                    icon: FilmIcon,
+                }
+        ]
+    
     return (
         <Popover className="relative bg-transparent pt-2">
         <div className="mx-auto px-6 w-4/5 md:w-5/6 bg-white rounded-lg shadow-2xl ">
             <div className="flex justify-center items-center py-6 md:space-x-10 ">
+                <a href="/" className="text-base font-medium text-black hover:text-zinc">
+                    Home
+                </a>
                 <Popover.Group as="nav" className="space-x-10 flex justify-center">
                     <Popover className="relative flex justify-center">
                     {({ open }) => (
@@ -103,7 +127,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                             <Popover.Panel className="absolute z-10 -ml-4 mt-9 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
                             <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                                {projects.map((item, index) => (
+                                {projects?.map((item, index) => (
                                     <a
                                     key={index}
                                     href={item.href}

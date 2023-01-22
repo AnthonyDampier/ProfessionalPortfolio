@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const TechArray = [
     {
         title: 'Git',
@@ -58,8 +60,18 @@ export default function TechnologyKnowledge(){
             <div className="flex justify-center">
             {TechArray.map((tech, index) => {
                 return(
-                    <a className="p-2" href={tech.href} target="_blank" key={index}>
-                        <img className='' src={tech.image} width={50} height={10}/>
+                    <a 
+                    className="p-2" 
+                    href={tech.href} 
+                    rel="noopener"
+                    target='_blank'
+                    key={index}>
+                        <Image 
+                        className='' 
+                        src={tech.image} 
+                        alt={tech.title}
+                        width={50} 
+                        height={10}/>
                         <h4 className="hidden hover:display">{tech.title}</h4>
                     </a>
                 )
