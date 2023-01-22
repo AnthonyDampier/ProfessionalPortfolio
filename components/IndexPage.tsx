@@ -39,7 +39,7 @@ export default function IndexPage(props: BlogPageProps) {
       <Layout preview={preview} loading={loading}>
         {/* Navigation goes here */}
         <Header posts={posts}/>
-        <div className='w-3/5 mx-auto'>
+        <div className='w-4/5 mx-auto'>
         <About/>
         <Projects/>
         {posts.length > 0 && 

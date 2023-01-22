@@ -69,7 +69,7 @@ export default function Header({ posts }: { posts: Post[] }) {
 
     return (
         <Popover className="relative bg-transparent pt-2">
-        <div className="mx-auto px-6 lg:w-4/6 md:w-5/6 bg-white rounded-lg shadow-2xl ">
+        <div className="mx-auto px-6 w-4/5 md:w-5/6 bg-white rounded-lg shadow-2xl ">
             <div className="flex justify-center items-center py-6 md:space-x-10 ">
                 <Popover.Group as="nav" className="space-x-10 flex justify-center">
                     <Popover className="relative flex justify-center">
