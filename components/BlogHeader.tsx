@@ -33,7 +33,7 @@ export default function BlogHeader({
     case 2:
       return (
         <div className='mb-10'>
-        <Header />
+        <Header posts={[]} />
           {/* <header className="mt-16 mb-5 flex flex-col items-center md:mb-12 md:flex-row md:justify-between">
             <h2 className="mt-3 mb-8 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
               <Link href="/" className="hover:underline">
