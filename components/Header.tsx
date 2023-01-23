@@ -221,7 +221,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                                     <ul role="list" className="mt-4 space-y-4">
                                     {posts.slice(0,5).map((post, index) => (
                                         <li key={index} className="truncate text-base indent-4">
-                                            <a href={post._id} className="font-medium text-zinc-700 hover:text-zinc-600">
+                                            <a href={`/posts/${post.slug}`} className="font-medium text-zinc-700 hover:text-zinc-600">
                                                 {post.title}
                                             </a>
                                         </li>
