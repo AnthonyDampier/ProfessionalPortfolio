@@ -13,10 +13,10 @@ export default function PostPreview({project})
     return (
         <div className='' key={key}>
             <a href={href} rel="noreferrer"  target='_blank'>
-                <h3 className="mb-3 text-3xl leading-snug text-white hover:underline cursor-pointer">
+                <h3 className="mb-3 text-3xl leading-snug text-white hover:underline decoration-1 decoration-zinc-300 underline-offset-2">
                     {title}
                 </h3>
-                {description && <p className="mb-4 text-lg leading-relaxed text-white cursor-pointer">{description}</p>}
+                {description && <p className="mb-4 text-lg leading-relaxed text-white cursor-pointer hover:underline decoration-1 decoration-zinc-300 underline-offset-2">{description}</p>}
                 <Image 
                 className='h-fit w-full object-fit transition-shadow shadow-slate-800 duration-200 
                 shadow-small hover:shadow-medium cursor-pointer object-fit h-64 hover:shadow-slate-800
