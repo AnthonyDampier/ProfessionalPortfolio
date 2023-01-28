@@ -92,9 +92,9 @@ export default function Header({ posts }: { posts: Post[] }) {
     
     return (
         <Popover className="relative bg-transparent pt-2">
-        <div className="mx-auto px-6 w-4/5 md:w-5/6 bg-white rounded-lg shadow-2xl ">
-            <div className="flex justify-center items-center py-6 md:space-x-10 ">
-                <Link href="/" className="text-base font-medium text-black hover:text-zinc">
+        <div className="mx-auto px-2 w-5/6 bg-white rounded-lg shadow-2xl ">
+            <div className="flex justify-center items-center py-6 space-x-10 ">
+                <Link href="/" className="text-base font-medium text-black hover:text-zinc-500">
                     Home
                 </Link>
                 <Popover.Group as="nav" className="space-x-10 flex justify-center">
@@ -107,7 +107,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                             'group inline-flex items-center text-center rounded-md bg-white text-base font-medium hover:text-black-900 focus:outline-none focus:ring-2 focus:ring-zinc-600 focus:ring-offset-2'
                             )}
                         >
-                            <span className='text-center'>Project Examples</span>
+                            <span className='text-center hover:text-zinc-500'>Project Examples</span>
                             <ChevronDownIcon
                             className={classNames(
                                 open ? 'text-black' : 'text-black',
@@ -177,7 +177,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                                 'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-zinc focus:outline-none focus:ring-2 focus:ring-zinc-600 focus:ring-offset-2'
                                 )}
                             >
-                                <span>Let&apos;s Connect</span>
+                                <span className='hover:text-zinc-500'>Let&apos;s Connect</span>
                                 <ChevronDownIcon
                                 className={classNames(
                                     open ? 'text-black' : 'text-black',
@@ -242,7 +242,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                     )}
                     </Popover>
                 </Popover.Group>
-                <a href="#blog" className="text-base font-medium text-black hover:text-zinc">
+                <a href="#blog" className="text-base font-medium text-black hover:text-zinc-500">
                     Blog
                 </a>
             </div>
@@ -294,7 +294,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                 </div>
                 <div className="space-y-6 py-6 px-5">
                     <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                        <a href="#" className="text-base font-medium text-black-900 hover:text-black-700">
+                        <a href="#" className="text-base font-medium text-black-900 hover:text-zinc-500">
                             Blog
                         </a>
                         <a href="#" className="text-base font-medium text-black-500 hover:text-black-900">
