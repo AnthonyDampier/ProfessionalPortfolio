@@ -4,7 +4,7 @@ export default function Resume(){
         
             <button className="group relative overflow-hidden bg-white shadow-slate-800 shadow-small">
                 <a 
-                href="../Resume/Anthony_Dampier_Resume.pdf" 
+                href="../Resume/Anthony_Dampier-Full_Stack_Engineer.pdf" 
                 rel="noopener"
                 target='_blank'
                 >
