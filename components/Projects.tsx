@@ -4,7 +4,10 @@ import {
     FilmIcon,
     PlayIcon,
     Squares2X2Icon,
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline';
+
+import { HiArchive } from "react-icons/hi";
+
 
 
 // brings in array of projects from component.
@@ -15,7 +18,7 @@ export default function Projects(){
         [
                 {
                     title: 'GoMove 💪🏽',
-                    description: 'Built using React, Postgres, ',
+                    description: 'Built using React, Postgres, express and much more',
                     href: 'https://protected-bastion-78122.herokuapp.com/#/home',
                     image: '/images/GoMoveProject.png',
                     icon: Squares2X2Icon,
@@ -29,10 +32,17 @@ export default function Projects(){
                 },
                 {
                     title: 'The Collection 🎬',
-                    description: 'Hire fantastic developers and UX designers!',
+                    description: 'Collection of Movie for private database!',
                     href: 'https://obscure-fortress-88731.herokuapp.com/#/',
                     image: '/images/TheCollectionProject.png',
                     icon: FilmIcon,
+                },
+                {
+                    title: 'MN Women\'s Press',
+                    description: 'Content & Contact Manager: Use \"Guest\" as username & password!',
+                    href: 'https://mnwomenpress-prototype.herokuapp.com/#/login',
+                    image: '/images/Screen Shot 2023-02-21 at 11.48.26 AM.png',
+                    icon: HiArchive,
                 }
         ]
 

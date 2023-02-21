@@ -11,20 +11,20 @@ export default function PostPreview({project})
     const { title, description, image, href, key} = project
     
     return (
-        <div className='' key={key}>
+        <div className='h-auto' key={key}>
             <a href={href} rel="noreferrer"  target='_blank'>
                 <h3 className="mb-3 text-3xl leading-snug text-white hover:underline decoration-1 decoration-zinc-300 underline-offset-2">
                     {title}
                 </h3>
                 {description && <p className="mb-4 text-lg leading-relaxed text-white cursor-pointer hover:underline decoration-1 decoration-zinc-300 underline-offset-2">{description}</p>}
                 <Image 
-                className='h-4/5 w-full object-fit transition-shadow shadow-slate-800 duration-200 
+                className='h-96 w-full object-fit transition-shadow shadow-slate-800 duration-200 
                 shadow-small hover:shadow-medium cursor-pointer object-fit h-64 hover:shadow-slate-800
                 transition-shadow duration-200 hover:shadow-medium
                 ' 
                 src={image}
                 width={2000}
-                height={1000}
+                height={100}
                 alt={`Cover Image for ${title}`}
                 />
             </a>
