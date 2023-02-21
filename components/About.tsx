@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Resume from "./Resume";
 import TechnologyKnowledge from "./TechnologyKnowledge";
 
@@ -7,6 +8,16 @@ export default function About(){
             <h1 className='drop-shadow-lg shadow-black font-bold text-white leading-tight tracking-tighter text-3xl md:text-4xl sm:text-3xl mb-1 flex justify-center'>
                 Hi, I&apos;m Anthony Dampier.
             </h1>
+            <Image 
+                className='h-32 w-32 mx-auto my-12 object-fit transition-shadow shadow-slate-800 duration-200 
+                shadow-small hover:shadow-medium cursor-pointer object-fit h-64 hover:shadow-slate-800
+                transition-shadow duration-200 hover:shadow-medium rounded-full
+                ' 
+                src={'/images/profile.png'}
+                width={2000}
+                height={100}
+                alt={`Cover Image of Anthony Dampier`}
+            />
             <h4 className='drop-shadow-lg shadow-black text-zinc-400 leading-tight tracking-tighter text-2xl mb-1 flex justify-center'>
                 Full Stack Web Developer  
             </h4>
