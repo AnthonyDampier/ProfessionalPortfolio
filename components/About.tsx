@@ -9,13 +9,13 @@ export default function About(){
                 Hi, I&apos;m Anthony Dampier.
             </h1>
             <Image 
-                className='h-32 w-32 mx-auto my-12 object-fit transition-shadow shadow-slate-800 duration-200 
+                className='h-32 w-32 mx-auto my-12 object-fit transition-shadow shadow-slate-800 
                 shadow-small hover:shadow-medium cursor-pointer object-fit h-64 hover:shadow-slate-800
-                transition-shadow duration-200 hover:shadow-medium rounded-full
+                transition-shadowhover:shadow-medium rounded-full
                 ' 
                 src={'/images/profile.png'}
                 width={2000}
-                height={100}
+                height={2000}
                 alt={`Cover Image of Anthony Dampier`}
             />
             <h4 className='drop-shadow-lg shadow-black text-zinc-400 leading-tight tracking-tighter text-2xl mb-1 flex justify-center'>
