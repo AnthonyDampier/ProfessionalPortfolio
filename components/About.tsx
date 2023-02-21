@@ -9,9 +9,7 @@ export default function About(){
                 Hi, I&apos;m Anthony Dampier.
             </h1>
             <Image 
-                className='h-32 w-32 mx-auto my-12 object-fit transition-shadow shadow-slate-800 
-                shadow-small hover:shadow-medium cursor-pointer object-fit h-64 hover:shadow-slate-800
-                transition-shadowhover:shadow-medium rounded-full
+                className='h-64 w-64 mx-auto my-12 object-fit object-fit drop-shadow-lg  shadow-black rounded-full
                 ' 
                 src={'/images/profile.png'}
                 width={2000}
