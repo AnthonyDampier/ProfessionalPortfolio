@@ -9,12 +9,12 @@ import { useRouter } from 'next/router'
 // import HeroPost from 'components/HeroPost'
 // import MoreStories from 'components/MoreStories'
 // import IntroTemplate from 'intro-template'
-import * as demo from 'lib/demo.data'
-import type { Post, Settings } from 'lib/sanity.queries'
-import About from './About'
-import BlogPage from './BlogPage'
+import * as demo from 'lib/demo.data';
+import type { Post, Settings } from 'lib/sanity.queries';
+import About from './About';
+import BlogPage from './BlogPage';
 import MoreStories from "./MoreStories";
-import Projects from './Projects'
+import Projects from './Projects';
 
 export interface BlogPageProps {
   preview?: boolean

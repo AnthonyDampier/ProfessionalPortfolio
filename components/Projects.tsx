@@ -22,6 +22,7 @@ export default function Projects(){
                     href: 'https://protected-bastion-78122.herokuapp.com/#/home',
                     image: '/images/GoMoveProject.png',
                     icon: Squares2X2Icon,
+                    gitHub: 'https://github.com/AnthonyDampier/GoMove'
                 },
                 {
                     title: 'Cactus Mayhem 🤠🌵',
@@ -29,6 +30,7 @@ export default function Projects(){
                     href: 'https://cactus-mayhem.herokuapp.com/',
                     image: '/images/CactusMayhemProject.png',
                     icon: PlayIcon,
+                    gitHub: 'https://github.com/AnthonyDampier/EVIL_CACTUS_SHOOT_MAYHEM'
                 },
                 {
                     title: 'The Collection 🎬',
@@ -36,6 +38,7 @@ export default function Projects(){
                     href: 'https://obscure-fortress-88731.herokuapp.com/#/',
                     image: '/images/TheCollectionProject.png',
                     icon: FilmIcon,
+                    gitHub: 'https://github.com/AnthonyDampier/movie-saga'
                 },
                 {
                     title: 'MN Women\'s Press',
@@ -43,6 +46,7 @@ export default function Projects(){
                     href: 'https://mnwomenpress-prototype.herokuapp.com/#/login',
                     image: '/images/Screen Shot 2023-02-21 at 11.48.26 AM.png',
                     icon: HiArchive,
+                    gitHub: 'https://github.com/AnthonyDampier/Shawl_MN_Women_Press'
                 }
         ]
 

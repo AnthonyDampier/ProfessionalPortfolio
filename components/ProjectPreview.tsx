@@ -8,7 +8,7 @@ import { urlForImage } from 'lib/sanity.image'
 
 export default function PostPreview({project})
 {
-    const { title, description, image, href, key} = project
+    const { title, description, image, href, key, gitHub} = project
     
     return (
         <div className='h-auto' key={key}>
@@ -28,6 +28,32 @@ export default function PostPreview({project})
                 alt={`Cover Image for ${title}`}
                 />
             </a>
+            <div className='margin-auto flex m-3 justify-around'>
+                <button className="group relative overflow-hidden bg-white shadow-slate-800 shadow-small w-1/3">
+                    <a 
+                    href={gitHub} 
+                    rel="noopener"
+                    target='_blank'
+                    >
+                        <div className="absolute inset-0 w-3 bg-gradient-to-r from-pink-700 to-purple-700 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                        <span className="relative text-zinc-700 group-hover:text-white flex justify-center font-bold text-lg p-3">
+                            Source Code
+                        </span>
+                    </a>
+                </button>
+                <button className="group relative overflow-hidden bg-white shadow-slate-800 shadow-small w-1/3">
+                    <a 
+                    href={href}
+                    rel="noopener"
+                    target='_blank'
+                    >
+                        <div className="absolute inset-0 w-3 bg-gradient-to-r from-pink-700 to-purple-700 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                        <span className="relative text-zinc-700 group-hover:text-white flex justify-center font-bold text-lg p-3">
+                            Live
+                        </span>
+                    </a>
+                </button>
+            </div>
         </div>
     )
 }

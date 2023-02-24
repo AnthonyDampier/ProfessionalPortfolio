@@ -2,27 +2,11 @@
 
 This starter is a statically generated blog that uses [Next.js][nextjs] for the frontend and [Sanity][sanity-homepage] to handle its content. It comes with a native Sanity Studio that offers features like real-time collaboration, instant side-by-side content previews, and intuitive editing.
 
-The Studio connects to Sanity Content Lake, which gives you hosted content APIs with a flexible query language, on-demand image transformations, powerful patching, and more. You can use this starter to kick-start a blog or learn these technologies.
+# Run Next.js locally in development mode
 
-[![Deploy with Vercel](https://vercel.com/button)][vercel-deploy]
-
-> **Note**
->
-> This starter uses the `/pages` directory for Next.js routing.
->
-> The template will be migrated to the currently experimental [/app][app-dir] directory
-> when Vercel announce that it is production ready.
-
-## Features
-
-- A performant, static blog with editable posts, authors, and site settings
-- A native and customizable authoring environment, accessible on `yourblog.com/studio`
-- Real-time and collaborative content editing with fine-grained revision history
-- Side-by-side instant content preview that works across your whole site
-- Support for block content and the most advanced custom fields capability in the industry
-- Webhook-triggered Incremental Static Revalidation; no need to wait for a rebuild to publish new content
-- Free and boosted Sanity project with unlimited admin users, free content updates, and pay-as-you-go for API overages
-- A project with starter-friendly and not too heavy-handed TypeScript and Tailwind.css
+```bash
+npm install && npm run dev
+```
 
 ## Table of Contents
 
