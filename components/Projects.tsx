@@ -7,6 +7,8 @@ import {
 } from '@heroicons/react/24/outline';
 
 import { HiArchive } from "react-icons/hi";
+import MdOutlineMessage from "react-icons";
+
 
 
 
@@ -47,7 +49,15 @@ export default function Projects(){
                     image: '/images/Screen Shot 2023-02-21 at 11.48.26 AM.png',
                     icon: HiArchive,
                     gitHub: 'https://github.com/AnthonyDampier/Shawl_MN_Women_Press'
-                }
+                },
+                {
+                    title: 'Message Template Creator',
+                    description: 'Create guest & company focuses messages using templates or by creating your own message!',
+                    href: 'https://message-template-tool.vercel.app/',
+                    image: '/images/MessageTemplateTool.png',
+                    icon: MdOutlineMessage,
+                    // gitHub: ''
+                },
         ]
 
 

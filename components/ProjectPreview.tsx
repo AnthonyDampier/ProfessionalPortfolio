@@ -29,6 +29,8 @@ export default function PostPreview({project})
                 />
             </a>
             <div className='margin-auto flex m-3 justify-around'>
+                {gitHub &&
+                
                 <button className="group relative overflow-hidden bg-white shadow-slate-800 shadow-small w-1/3">
                     <a 
                     href={gitHub} 
@@ -40,7 +42,7 @@ export default function PostPreview({project})
                             Source Code
                         </span>
                     </a>
-                </button>
+                </button>}
                 <button className="group relative overflow-hidden bg-white shadow-slate-800 shadow-small w-1/3">
                     <a 
                     href={href}
