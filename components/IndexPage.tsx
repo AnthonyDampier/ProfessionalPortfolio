@@ -35,7 +35,7 @@ export default function IndexPage(props: BlogPageProps) {
   }
 
   return (
-    <div className="bg-gradient-to-r from-gray-900 to-slate-600 antialiased w-fit pl-10 pr-10">
+    <div className=" w-100 bg-gradient-to-r from-gray-900 to-slate-600 antialiased pl-10 pr-10">
       <Layout preview={preview} loading={loading}>
         {/* Navigation goes here */}
         <Header posts={posts}/>
