@@ -100,8 +100,8 @@ export default function Header({ posts }: { posts: Post[] }) {
     
     return (
         <Popover className="relative bg-transparent pt-2">
-        <div className="mx-auto px-2 w-5/6 bg-white rounded-lg shadow-2xl ">
-            <div className="flex justify-center items-center py-6 space-x-10 ">
+        <div className="mx-auto  p-5 w-5/6 bg-white rounded-lg shadow-2xl ">
+            <div className="flex justify-center items-center space-x-10 ">
                 <Link href="/" className="text-base font-medium text-black hover:text-zinc-500">
                     Home
                 </Link>
@@ -134,7 +134,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 translate-y-1"
                         >
-                            <Popover.Panel className="absolute z-10 -ml-4 mt-9 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
+                            <Popover.Panel className="absolute z-10 ml-4 mt-9 w-screen max-w-md transform px-2 sm:px-0 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2">
                             <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                 <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                                 {projects?.map((item, index) => (
@@ -143,7 +143,7 @@ export default function Header({ posts }: { posts: Post[] }) {
                                     href={item.href}
                                     rel='noreferrer'
                                     target="_blank"
-                                    className="-m-3 flex items-start rounded-lg p-3 hover:bg-black-50"
+                                    className="m-3 flex items-start rounded-lg p-3 hover:bg-black-50"
                                     >
                                     <item.icon className="h-6 w-6 flex-shrink-0 text-zinc-400" aria-hidden="true" />
                                     <div className="ml-4">

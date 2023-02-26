@@ -27,6 +27,7 @@ export default function Page(props: PageProps) {
 
   if (preview) {
     return (
+
       <PreviewSuspense
         fallback={
           <IndexPage loading preview posts={posts} settings={settings} />

@@ -35,22 +35,24 @@ export default function IndexPage(props: BlogPageProps) {
   }
 
   return (
-    <div className=" w-100 bg-gradient-to-r from-gray-900 to-slate-600 antialiased pl-10 pr-10">
+
       <Layout preview={preview} loading={loading}>
         {/* Navigation goes here */}
-        <Header posts={posts}/>
-        <div className='w-5/6 mx-auto'>
-        <About/>
-        <Projects/>
-        {posts.length > 0 && 
-          <MoreStories posts={posts} />
-        }
+        <div className="mx-36">
+          <Header posts={posts}/>
+          <div className=''>
+          <About/>
+          <Projects/>
+          {posts.length > 0 && 
+            <MoreStories posts={posts} />
+          }
+          </div>
+          {/* <BlogPage preview={preview} loading={loading} posts={posts} settings={settings}/> */}
+          <h4 className='flex justify-center text-xl tracking-wider underline decoration-1 font-light text-zinc-300 pb-10 pt-20'>
+            Built using Next.js & Sanity
+          </h4>
         </div>
-        {/* <BlogPage preview={preview} loading={loading} posts={posts} settings={settings}/> */}
-        <h4 className='flex justify-center text-xl tracking-wider underline decoration-1 font-light text-zinc-300 pb-10 pt-20'>
-          Built using Next.js & Sanity
-        </h4>
       </Layout>
-    </div>
+
   )
 }
