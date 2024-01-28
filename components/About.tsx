@@ -14,7 +14,7 @@ export default function About(){
                 alt={`Cover Image of Anthony Dampier`}
             />
             <h4 className='drop-shadow-lg shadow-black text-zinc-400 leading-tight tracking-tighter text-2xl mb-1 flex justify-center'>
-                Full Stack Web Developer  
+                Project Manager / Product Owner / Developer / Consultant
             </h4>
             <h4 className='font-semibold mt-5 text-white leading-tight tracking-tighter lg:text-6xl md:text-2xl sm:text-3xl text-2xl flex justify-center h-16'>
                 Turning 
