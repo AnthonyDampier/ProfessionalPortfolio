@@ -5,9 +5,6 @@ import TechnologyKnowledge from "./TechnologyKnowledge";
 export default function About(){
     return(
         <section className={`mt-24 mb-36 text-center text-lg`}>
-            <h1 className='drop-shadow-lg shadow-black font-bold text-white leading-tight tracking-tighter text-3xl md:text-4xl sm:text-3xl mb-1 flex justify-center'>
-                Hi, I&apos;m Anthony Dampier.
-            </h1>
             <Image 
                 className='h-64 w-64 mx-auto my-12 object-fit object-fit drop-shadow-lg  shadow-black rounded-full
                 ' 

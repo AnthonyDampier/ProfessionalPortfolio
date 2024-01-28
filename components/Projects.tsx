@@ -16,6 +16,12 @@ import MdOutlineMessage from "react-icons";
 
 
 export default function Projects(){
+    const lastUpdateDate = new Date('2023-02-01');
+    const currentDate = new Date();
+    const differenceInTime = currentDate.getTime() - lastUpdateDate.getTime();
+    const differenceInDays = Math.ceil(differenceInTime / (1000 * 3600 * 24));
+
+
     const projects =
         [
                 {
@@ -64,22 +70,24 @@ export default function Projects(){
     return(
         <div id='projects' className={`mb-24 text-lg`}>
             <h4 className='font-semibold  text-white leading-tight tracking-tighter md:text-4l text-6xl flex justify-center'>
-                From
-                <div className="z-1 drop-shadow-lg shadow-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-500 ">
+                These are a few
+                {/* <div className="z-1 drop-shadow-lg shadow-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-500 ">
                 &nbsp;idea&nbsp;
-                </div>
-                to
+                </div> */}
                 <div className="z-1 drop-shadow-lg shadow-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 ">
-                &nbsp;product&nbsp;
+                &nbsp;Projects&nbsp;
                 </div>
-                to
-                <div className="z-1 drop-shadow-lg shadow-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-800 ">
-                &nbsp;consumer
+                {/* <div className="z-1 drop-shadow-lg shadow-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-800 ">
+                &nbsp;consumers
+                </div> */}
+                I've had the 
+                <div className="z-1 drop-shadow-lg shadow-black font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 ">
+                &nbsp;opportunity&nbsp;
                 </div>
-                .  
+                to build.  
             </h4>
             <h4 className='flex justify-center text-l tracking-tightly decoration-1 font-light text-zinc-300 mb-8'>
-            Projects
+            Projects Last Updated {differenceInDays.toString()} Days Ago
             </h4>
             <div className="">
                 {projects.length > 0 && <ProjectDisplays projects={projects} />}
